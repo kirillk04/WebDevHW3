@@ -1,0 +1,43 @@
+.menu-section { background: var(--cream); }
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.menu-category {
+  border: 1px solid rgba(184,150,46,0.2);
+  padding: 2rem;
+  background: #fff;
+}
+
+.menu-cat-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-weight: 400;
+  font-size: 1.2rem; color: var(--ember);
+  border-bottom: 1px solid rgba(184,150,46,0.22);
+  padding-bottom: 0.7rem; margin-bottom: 1.3rem;
+  letter-spacing: 0.03em;
+}
+
+.menu-item {
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 0.75rem;
+  padding: 0.72rem 0;
+  border-bottom: 1px dashed rgba(122,106,90,0.2);
+}
+.menu-item:last-child { border-bottom: none; }
+
+.menu-item-name  { font-size: 0.93rem; margin-bottom: 0.22rem; font-weight: 400; }
+.menu-item-desc  { font-size: 0.77rem; color: var(--muted); line-height: 1.58; font-weight: 300; }
+.menu-item-price {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 1.05rem; color: var(--ember);
+  flex-shrink: 0; min-width: 3rem; text-align: right;
+}
+
+@media (max-width: 768px) {
+  .menu-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}

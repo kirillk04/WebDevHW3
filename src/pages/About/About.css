@@ -1,0 +1,64 @@
+.about-section { background: var(--cream); }
+
+/* \ Story grid  */
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem; align-items: start;
+}
+.about-img  { width: 100%; height: 420px; object-fit: cover; display: block; }
+.about-text p { font-size: 0.9rem; color: #444; line-height: 1.92; margin-bottom: 1rem; font-weight: 300; }
+
+/*  Stats  */
+.about-stats {
+  display: flex; gap: 2rem; margin-top: 1.8rem;
+  border-top: 1px solid rgba(184,150,46,0.22); padding-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.about-stat strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 1.9rem; color: var(--ember); font-weight: 400;
+}
+.about-stat span {
+  font-size: 0.7rem; color: var(--muted);
+  letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400;
+}
+
+/*  Team  */
+.team-section { background: var(--charcoal); padding: 4rem 3rem; }
+
+.team-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; margin-top: 1.5rem;
+}
+
+.team-card {
+  text-align: center; padding: 1.8rem 1.5rem;
+  border: 1px solid rgba(184,150,46,0.18);
+  transition: border-color 0.3s, transform 0.3s;
+}
+.team-card:hover { border-color: var(--ember); transform: translateY(-4px); }
+
+.team-card img {
+  width: 88px; height: 88px; border-radius: 50%;
+  object-fit: cover; object-position: top;
+  margin: 0 auto 1rem; display: block;
+  border: 2px solid rgba(184,150,46,0.3);
+}
+.team-card h4 {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400;
+  font-size: 1.05rem; color: var(--gold); margin-bottom: 0.3rem;
+}
+.team-card p { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.07em; font-weight: 300; }
+
+/*  Responsive  */
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-img  { height: 260px; }
+  .team-section { padding: 3rem 1.5rem; }
+  .team-grid    { grid-template-columns: 1fr 1fr; }
+  .about-stats  { flex-wrap: wrap; gap: 1.2rem; }
+}
+@media (max-width: 480px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
